@@ -1,0 +1,58 @@
+mutation {
+  add_assessment_question(
+    assessment_url: "learning-keras"
+    question_type: "multiple-choice"
+    question_statement: "What makes Nosql schemaless"
+    answer_options: [
+      { option_statement: "i dont know", is_correct: false }
+      { option_statement: "do you not know", is_correct: false }
+      { option_statement: "We both know", is_correct: false }
+      {
+        option_statement: "We both  dont know"
+        is_correct: true
+        correct_answer_explanation: "Are you really asking me that"
+      }
+ 
+    ]
+  ) {
+    message
+    value
+    question {
+      question_statement
+      question_type
+      question_diagram_url
+      answer_options {
+        option_statement
+        is_correct
+        correct_answer_explanation
+      }
+    }
+    examiner {
+      _id
+      full_name
+    }
+  }
+}
+#########
+mutation{
+  take_assessment(assessment_url:"learning-keras") {
+    message
+    value
+    assessment{
+      _id
+      title
+      assessment_url
+    }
+    questions{
+      question_statement
+      answer_options{
+        option_statement
+        is_correct
+        correct_answer_explanation
+      }
+    }
+  }
+}
+
+
+
