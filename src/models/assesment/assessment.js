@@ -59,7 +59,7 @@ const assessmemtSchema = new Schema(
 
     cont_asmnt_id: {
       type: String,
-      required: true,
+      required: false,
     },
     assessment_percentage: {
       type: Number,
