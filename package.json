@@ -32,7 +32,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "graphql": "^15.1.0",
     "graphql-iso-date": "^3.6.1",
     "graphql-log": "^0.1.3",
